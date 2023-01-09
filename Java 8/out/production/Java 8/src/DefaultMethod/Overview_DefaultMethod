@@ -1,0 +1,13 @@
+-Giúp chúng ta dễ dàng mở rộng interface mà không phá vỡ các class được implements từ nó
+-Giúp chúng ta tránh dùng các class tiện ích, ví dụ như tất cả phương thức của class Collections có thể được cung cấp ngay bên trong interface của nó.
+-Giúp chúng ta tháo gỡ các class cơ sở (base class), chúng ta có thể tạo phương thức default và trong class được implement có thể chọn phương thức để override.
+-Một trong những lý do xuất hiện của phương thức default là để nâng cấp Collection API trong Java 8 hỗ trợ cho Lambda Expression.
+-Nếu bất kỳ class nào kế thừa những phương thức default giống nhau, thì nó sẽ không còn hiệu lực. 
+ Một điều tương tự, một phương thức default sẽ không thể override một phương thức từ java.lang.Object. 
+ Lý do rất đơn giản là bởi vì Object là base class của tất cả các class trong Java. 
+ Vì vậy nếu chúng ta có các phương thức của class Object được định nghĩa là phương thức default trong interface, 
+ nó sẽ không dùng được bởi vì các phương thức của Object luôn luôn được sử dụng. Đây lý do tại sao chúng ta sẽ không có bất cứ phương thức default nào 
+ override các phương thức của class Object.
+-Phương thức default cũng có thể được gọi là phương thức Defender (Defender Methods) hay là phương thức Virtual mở rộng (Virtual extension methods).
+-Phương thức default cho phép các Java interface đã tồn tại phát triển thêm mà không gây lỗi trong quá trình biên dịch. Ví dụ như bổ sung các phương thức 
+ vào interface java.util.Collection: stream(), parallelStream(), forEach(), …

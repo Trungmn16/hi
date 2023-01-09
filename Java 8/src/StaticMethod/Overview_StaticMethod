@@ -1,0 +1,8 @@
+-Phương thức static là một thành phần của interface, chúng ta có thể sử dụng nó trong class được implements từ nó.
+-Phương thức static rất hữu ích trong việc cung cấp các phương thức tiện ích.
+-Lớp con có thể định nghĩa một phương thức cùng tên với phương thức static của interface cha.
+-Tuy nhiên, chúng ta không thể thêm annotation @Override cho phương thức này.
+ Chúng ta không thể định nghĩa phương thức static của các phương thức thuộc class Object,
+ chúng ta sẽ gặp lỗi “This static method cannot hide the instance method from Object”.
+-Điều này không cho phép trong Java, khi Object là base class cho tất cả các class và chúng ta không thể có một phương thức static và một phương thức khác
+cùng định dạng.
